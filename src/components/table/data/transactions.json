@@ -1,0 +1,205 @@
+[
+  {
+    "document_id": "49284720",
+    "operation_date": "26.01.2024 21:06:25",
+    "debet": 5650,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "3",
+    "operation_date": "25.01.2024 15:45:43",
+    "debet": 2450,
+    "beneficiary_name": "НАО \"Государственная корпорация «Правительство для граждан\"\nИИН/БИН 160440007161",
+    "beneficiary_iic": "KZ67009SS00368609110",
+    "beneficiary_bank_bic": "GCVPKZ2A",
+    "knp": "012",
+    "payment_purpose": "Социальные отчисления за декабрь 2023г."
+  },
+  {
+    "document_id": "1",
+    "operation_date": "25.01.2024 15:45:40",
+    "debet": 7000,
+    "beneficiary_name": "НАО \"Государственная корпорация «Правительство для граждан\"\nИИН/БИН 160440007161",
+    "beneficiary_iic": "KZ12009NPS0413609816",
+    "beneficiary_bank_bic": "GCVPKZ2A",
+    "knp": "010",
+    "payment_purpose": "Обязательные пенсионные взносы за декабрь 2023г."
+  },
+  {
+    "document_id": "2",
+    "operation_date": "25.01.2024 15:45:16",
+    "debet": 4900,
+    "beneficiary_name": "НАО \"Государственная корпорация «Правительство для граждан\"\nИИН/БИН 160440007161",
+    "beneficiary_iic": "KZ92009MEDS368609103",
+    "beneficiary_bank_bic": "GCVPKZ2A",
+    "knp": "122",
+    "payment_purpose": "Взносы на обязательное социальное медицинское страхование за декабрь 2023г."
+  },
+  {
+    "document_id": "46569930",
+    "operation_date": "25.01.2024 15:27:51",
+    "credit": 20000,
+    "beneficiary_name": "АО \"KASPI BANK\"\nИИН/БИН 971240001315",
+    "beneficiary_iic": "KZ15722S000001351461",
+    "knp": "331",
+    "payment_purpose": "Взнос наличных в Kaspi Банкомате"
+  },
+  {
+    "document_id": "23197352",
+    "operation_date": "14.11.2023 18:21:36",
+    "debet": 598150,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "11467400",
+    "operation_date": "07.11.2023 22:06:29",
+    "debet": 500000,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "11160447",
+    "operation_date": "07.11.2023 16:11:04",
+    "debet": 180000,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "909350",
+    "operation_date": "01.11.2023 18:47:28",
+    "debet": 1950,
+    "beneficiary_name": "АО \"KASPI BANK\"\nИИН/БИН 971240001315",
+    "beneficiary_iic": "KZ11722S000030672305",
+    "knp": "841",
+    "payment_purpose": "Погашение комиссии за ведение счета (абонентская плата) за октябрь 2023 согласно тарифного плана \"Kaspi Pay\", без НДС сч KZ94722S000028640504 ИИН/БИН 940122300138"
+  },
+  {
+    "document_id": "53027860",
+    "operation_date": "31.10.2023 17:39:13",
+    "debet": 750000,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "692",
+    "operation_date": "30.10.2023 16:57:09",
+    "credit": 750000,
+    "beneficiary_name": "ТОО \"Intelligent Data Solutions\"\nИИН/БИН 090340001480",
+    "beneficiary_iic": "KZ108562203104789477",
+    "beneficiary_bank_bic": "KCJBKZKX",
+    "knp": "859",
+    "payment_purpose": "Оказание услуг по договору 19 от 27.10.2023 Платежи за профессиональные, научные и технические услуги (филиал получ. No CASPKZKA)"
+  },
+  {
+    "document_id": "46233146",
+    "operation_date": "27.10.2023 16:16:24",
+    "debet": 1000000,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "41053972",
+    "operation_date": "24.10.2023 16:45:31",
+    "debet": 500000,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "39421165",
+    "operation_date": "23.10.2023 19:24:56",
+    "debet": 700000,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "39018611",
+    "operation_date": "23.10.2023 12:29:47",
+    "debet": 1000000,
+    "beneficiary_name": "АО \"KASPI BANK\"\nИИН/БИН 971240001315",
+    "beneficiary_iic": "KZ14722S000017563865",
+    "knp": "341",
+    "payment_purpose": "Снятия наличных в Kaspi Банкомат"
+  },
+  {
+    "document_id": "34819187",
+    "operation_date": "20.10.2023 21:51:31",
+    "debet": 500000,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "41",
+    "operation_date": "20.10.2023 15:00:51",
+    "credit": 1000000,
+    "beneficiary_name": "ИП ҚОШКАРБАЕВ\nИИН/БИН 030507551524",
+    "beneficiary_iic": "KZ70722S000018679909",
+    "knp": "851",
+    "payment_purpose": "За компьютерные услуги. Оплата по договору SK-BM-2, от 19.10.20 за разработку  серверной части и приложения. Без НДС."
+  },
+  {
+    "document_id": "40",
+    "operation_date": "19.10.2023 16:40:20",
+    "credit": 2800000,
+    "beneficiary_name": "ИП ҚОШКАРБАЕВ\nИИН/БИН 030507551524",
+    "beneficiary_iic": "KZ70722S000018679909",
+    "knp": "851",
+    "payment_purpose": "За компьютерные услуги. Оплата по договору SK-BM-2, от 19.10.20 за разработку  серверной части и приложения. Без НДС."
+  },
+  {
+    "document_id": "29348147",
+    "operation_date": "17.10.2023 18:03:32",
+    "debet": 1000000,
+    "beneficiary_name": "Бексултан Багланович М.",
+    "beneficiary_iic": "KZ64722C000021176045",
+    "knp": "342",
+    "payment_purpose": "Перевод собственных средств на карту Kaspi Gold *0912"
+  },
+  {
+    "document_id": "5",
+    "operation_date": "17.10.2023 16:29:02",
+    "credit": 2180000,
+    "beneficiary_name": "ИП DARIBEK ADILET\nИИН/БИН 030206551528",
+    "beneficiary_iic": "KZ93722S000027110347",
+    "knp": "851",
+    "payment_purpose": "За компьютерные услуги. Оплата по договору AD-BM-1 от 16.10.23 за разработку алгоритмов искусственного интеллекта. Без НДС."
+  },
+  {
+    "document_id": "1",
+    "operation_date": "16.08.2023 08:14:19",
+    "debet": 1005000,
+    "beneficiary_name": "ИП ҚОШКАРБАЕВ\nИИН/БИН 030507551524",
+    "beneficiary_iic": "KZ70722S000018679909",
+    "beneficiary_bank_bic": "CASPKZKA",
+    "knp": "851",
+    "payment_purpose": "За компьютерные услуги."
+  },
+  {
+    "document_id": "10",
+    "operation_date": "15.08.2023 18:01:33",
+    "credit": 1005100,
+    "beneficiary_name": "ИП ЖАНЫЗАҚ\nИИН/БИН 001124550402",
+    "beneficiary_iic": "KZ25722S000023015649",
+    "knp": "851",
+    "payment_purpose": "За компьютерные услуги."
+  }
+]
