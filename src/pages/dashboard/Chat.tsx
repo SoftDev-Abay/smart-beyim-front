@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { FaEllipsisV, FaPaperPlane } from "react-icons/fa";
-
-// @ts-ignore
-// @ts-nocheck
-
 import axios from "axios";
-import { Message } from "../../components/UI/assets";
+
+// Define the Message interface if it's not defined in the imported file.
+interface Message {
+  role: string; // 'user' or 'assistant'
+  content: string;
+}
 
 interface MessageBlockProps {
   message: Message;
@@ -15,7 +16,7 @@ const MessageBlock = ({ message }: MessageBlockProps) => {
   const isUser = message.role === "user";
   return (
     <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
-      <div className={`flex w-fit flex-col `}>
+      <div className="flex w-fit flex-col">
         <div
           className={`rounded bg-gray-200 p-5 ${isUser ? "bg-primary-1000 text-primary-50" : "text-black bg-white"}`}
         >
@@ -26,76 +27,71 @@ const MessageBlock = ({ message }: MessageBlockProps) => {
   );
 };
 
-const Chat = ({ pageTitle }: { pageTitle: string }) => {
+interface ChatProps {
+  pageTitle: string;
+}
+
+const Chat = ({ pageTitle }: ChatProps) => {
   useEffect(() => {
     document.title = pageTitle;
   }, [pageTitle]);
 
   const [messages, setMessages] = useState<Message[]>([]);
-  const dummyMessageLastRef = useRef<
-    React.LegacyRef<HTMLDivElement> | undefined
-  >(null);
+  const dummyMessageLastRef = useRef<HTMLDivElement>(null);
   const [message, setMessage] = useState("");
 
   const getMessages = async () => {
     try {
-      const responce = await axios.get("http://localhost:8082/chat?user_id=1");
-      const messages = responce.data.Messages;
-
-      console.log(messages);
+      const response = await axios.get("http://localhost:8082/chat?user_id=1");
+      const messages = response.data.Messages;
 
       if (messages) {
         setMessages(messages);
       }
-    } catch (error: any) {
-      console.log(error.message);
+    } catch (error) {
+      console.error(error);
     }
   };
 
   const scrollToBottom = () => {
-    if (!dummyMessageLastRef.current) return;
-    // @ts-ignore
-    dummyMessageLastRef.current.scrollIntoView({ behavior: "smooth" });
+    dummyMessageLastRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const storeMessageOnDb = async () => {
     try {
-      const responce = await axios.post("http://localhost:8082/chat", {
+      const response = await axios.post("http://localhost:8082/chat", {
         content: message,
         user_id: "1",
       });
 
-      const data = responce.data;
-
-      if (data.answer) {
-        console.log(data);
-
-        const answer = data.answer as string;
-
+      if (response.data.answer) {
         const newMessage: Message = {
           role: "assistant",
-          content: answer,
+          content: response.data.answer,
         };
         setMessages((prev) => [...prev, newMessage]);
         scrollToBottom();
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
   const handleSendMessage = () => {
-    setMessages((prev) => [
-      ...prev,
-      {
-        role: "user",
-        content: message,
-      },
-    ]);
+    if (!message) return;
+    const newUserMessage: Message = {
+      role: "user",
+      content: message,
+    };
+    setMessages((prev) => [...prev, newUserMessage]);
     storeMessageOnDb();
     setMessage("");
     scrollToBottom();
   };
+
+  useEffect(() => {
+    getMessages();
+  }, []);
 
   const handleDefaultMessage = () => {
     setMessage({
@@ -114,19 +110,12 @@ const Chat = ({ pageTitle }: { pageTitle: string }) => {
     setMessage("");
     scrollToBottom();
   };
-
-  useEffect(() => {
-    getMessages();
-  }, []);
-
-  console.log(messages);
-
   return (
     <>
-      <div className="relative box-border flex flex w-full max-w-6xl flex-grow flex-col flex-col">
-        <div className="flex flex-grow flex-col gap-5  p-8  ">
-          {messages.map((message) => (
-            <MessageBlock message={message} />
+      <div className="relative box-border flex w-full max-w-6xl flex-grow flex-col">
+        <div className="flex flex-grow flex-col gap-5 p-8">
+          {messages.map((message, index) => (
+            <MessageBlock key={index} message={message} />
           ))}
           <div ref={dummyMessageLastRef}></div>
         </div>

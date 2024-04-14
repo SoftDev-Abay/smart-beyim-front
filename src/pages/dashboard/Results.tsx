@@ -7,7 +7,6 @@ import { columns } from "../../components/table/transactions_columns";
 // import { DataTable } from "../../components/table/DataTable";
 import { DataTable } from "../../components/table/data-table";
 import data from "../../components/table/data/transactions.json";
-import { z } from "zod";
 import axios from "axios";
 import { IeltsTest, IeltsSkillTest } from "../../types/ieltstests";
 

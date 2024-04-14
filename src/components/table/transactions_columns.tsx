@@ -33,7 +33,7 @@ export const columns: ColumnDef<IeltsSkill>[] = [
     // @ts-ignore
 
     cell: ({ row }) => (
-      <div className="w-[120px]">{row.getValue("score").toFixed(2)}</div>
+      <div className="w-[120px]">{Math.ceil(row.getValue("score"))}</div>
     ),
   },
   {
