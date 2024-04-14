@@ -5,6 +5,7 @@ import {
   EyeOffIcon,
 } from "lucide-react";
 
+// @ts-nocheck
 import { Column } from "@tanstack/react-table";
 
 import { cn } from "../../utils/utils";

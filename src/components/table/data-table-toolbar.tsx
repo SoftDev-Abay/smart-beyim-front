@@ -4,7 +4,6 @@ import { XIcon } from "lucide-react";
 import { Table } from "@tanstack/react-table";
 
 import { Button } from "../shadcn/ui/button";
-import { Input } from "../shadcn/ui/input";
 import { DataTableViewOptions } from "./data-table-view-options";
 
 import { priorities, statuses } from "./data/data";
@@ -40,7 +39,6 @@ export function DataTableToolbar<TData>({
         )}
         {isFiltered && (
           <Button
-            variant="ghost"
             onClick={() => table.resetColumnFilters()}
             className="h-8 px-2 lg:px-3"
           >

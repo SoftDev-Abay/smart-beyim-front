@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { FaEllipsisV, FaPaperPlane } from "react-icons/fa";
+
+// @ts-ignore
 import axios from "axios";
-import {  Message } from "../../components/UI/assets";
+import { Message } from "../../components/UI/assets";
 
 interface MessageBlockProps {
   message: Message;
@@ -35,96 +37,104 @@ const Chat = ({ pageTitle }: { pageTitle: string }) => {
 
   const getMessages = async () => {
     try {
-      const responce = await axios.get("http://localhost:8082/chat?user_id=1")
-      const messages = responce.data.Messages
+      const responce = await axios.get("http://localhost:8082/chat?user_id=1");
+      const messages = responce.data.Messages;
 
-      console.log(messages)
+      console.log(messages);
 
-      if(messages) {
-        setMessages(messages)
+      if (messages) {
+        setMessages(messages);
       }
-    } catch (error:any) {
-      console.log(error.message)
+    } catch (error: any) {
+      console.log(error.message);
     }
   };
 
-
-
   const scrollToBottom = () => {
     if (!dummyMessageLastRef.current) return;
+    // @ts-ignore
     dummyMessageLastRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const storeMessageOnDb = async () => {
     try {
       const responce = await axios.post("http://localhost:8082/chat", {
-        content:message,
-        user_id:"1"
-    })
+        content: message,
+        user_id: "1",
+      });
 
-    const data = responce.data
-    
+      const data = responce.data;
 
-    if (data.answer) {
+      if (data.answer) {
+        console.log(data);
 
-      console.log(data)
+        const answer = data.answer as string;
 
-
-      const answer = data.answer as string
-
-      const newMessage :Message = {
-        role:"assistant",
-        content:answer
+        const newMessage: Message = {
+          role: "assistant",
+          content: answer,
+        };
+        setMessages((prev) => [...prev, newMessage]);
+        scrollToBottom();
       }
-      setMessages((prev)=>[...prev, newMessage ])
-      scrollToBottom();
-
-    }    
-
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
   const handleSendMessage = () => {
-    setMessages((prev)=>[...prev, {
-      role:"user",
-      content:message
-    }])
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "user",
+        content: message,
+      },
+    ]);
     storeMessageOnDb();
     setMessage("");
     scrollToBottom();
   };
 
   const handleDefaultMessage = () => {
-    setMessages((prev)=>[...prev, {
-      role:"user",
-      content:"give_me_review"
-    }])
+    setMessage({
+      // @ts-ignore
+      role: "user",
+      content: "give_me_review",
+    });
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "user",
+        content: "give_me_review",
+      },
+    ]);
     storeMessageOnDb();
     setMessage("");
     scrollToBottom();
   };
 
-  useEffect(()=>{
-    getMessages()
-  },[])
+  useEffect(() => {
+    getMessages();
+  }, []);
 
-  console.log(messages)
+  console.log(messages);
 
   return (
     <>
-      <div className="relative box-border flex flex-grow flex-col w-full max-w-6xl flex flex-col">
+      <div className="relative box-border flex flex w-full max-w-6xl flex-grow flex-col flex-col">
         <div className="flex flex-grow flex-col gap-5  p-8  ">
-          {messages.map((message)=>
-          <MessageBlock message={message} />
-          )}
+          {messages.map((message) => (
+            <MessageBlock message={message} />
+          ))}
           <div ref={dummyMessageLastRef}></div>
         </div>
 
         <div className="sticky bottom-0 left-0">
           <div className="flex flex-grow flex-row gap-5  p-8  ">
-            <div className="flex-1 cursor-pointer rounded-lg border-2 border-primary-1000 px-4 py-[14px] backdrop-blur" onClick={handleDefaultMessage}>
+            <div
+              className="flex-1 cursor-pointer rounded-lg border-2 border-primary-1000 px-4 py-[14px] backdrop-blur"
+              onClick={handleDefaultMessage}
+            >
               <p className="mb-[5px] text-subHeading3 font-bold text-secondary-1000">
                 Review my results
               </p>
@@ -132,7 +142,10 @@ const Chat = ({ pageTitle }: { pageTitle: string }) => {
                 analyzes the results of the tests and generates reports
               </p>
             </div>
-            <div className="flex-1 cursor-pointer rounded-lg border-2 border-primary-1000 px-4 py-[14px] backdrop-blur" onClick={handleDefaultMessage}>
+            <div
+              className="flex-1 cursor-pointer rounded-lg border-2 border-primary-1000 px-4 py-[14px] backdrop-blur"
+              onClick={handleDefaultMessage}
+            >
               <p className="mb-[5px] text-subHeading3 font-bold text-secondary-1000">
                 Improve my grades
               </p>
@@ -172,3 +185,5 @@ const Chat = ({ pageTitle }: { pageTitle: string }) => {
 };
 
 export default Chat;
+
+// @ts-nocheck

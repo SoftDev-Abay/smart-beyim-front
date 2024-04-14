@@ -1,8 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import RequireAuth from "@auth-kit/react-router/RequireAuth";
 
 import Dashboard from "./pages/dashboard/Dashoboard";
-import RevenueManagement from "./pages/dashboard/Results";
 
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
@@ -12,7 +10,7 @@ import NotAuthorized from "./pages/errors/NotAuthorized";
 import Chat from "./pages/dashboard/Chat";
 import RootLayout from "./components/UI/Layout/Dashboard/RootLayout";
 import AuthLayout from "./components/UI/Layout/AuthLayout";
-import Results from "./pages/dashboard/Results"
+import Results from "./pages/dashboard/Results";
 function App() {
   return (
     <Routes>

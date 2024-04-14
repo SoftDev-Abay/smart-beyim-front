@@ -1,7 +1,5 @@
 import React from "react";
 import Icon from "../Icon/Icon";
-import FeatherIcon from "feather-icons-react";
-import { numberWithSpaces } from "../../../utils/utils";
 import { ISummaryCard } from "../assets";
 import { cn } from "../../../utils/utils";
 import FilterDate from "../FilterDate";
@@ -30,7 +28,6 @@ const SummaryCard: React.FC<ISummaryCardProps> = ({
   // Conditional text color class
   const textColorClass = highlight ? "text-white" : "";
   const labelColorClass = highlight ? "text-white" : "text-black-300";
-  const percentageColorClass = highlight ? "text-primary-100" : "text-go";
 
   return (
     <div {...props} className={cn(containerClasses, className)}>
@@ -52,7 +49,9 @@ const SummaryCard: React.FC<ISummaryCardProps> = ({
               {item.label}
             </p>
             <div className="flex items-center gap-[7.5px]">
-              <p className="text-subHeading2 font-medium">{item.value ? item.value : 0 }</p>
+              <p className="text-subHeading2 font-medium">
+                {item.value ? item.value : 0}
+              </p>
             </div>
           </div>
         ))}
