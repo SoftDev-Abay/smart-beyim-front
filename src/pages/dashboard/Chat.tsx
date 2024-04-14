@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { FaEllipsisV, FaPaperPlane } from "react-icons/fa";
 
 // @ts-ignore
+// @ts-nocheck
+
 import axios from "axios";
 import { Message } from "../../components/UI/assets";
 
